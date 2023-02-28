@@ -157,6 +157,17 @@ Test this function by hand in the console to get it working, and when you think 
 let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+    let p = multiply(multiplyAnyArray[0], multiplyAnyArray[1])[0];
+    let p2 = multiply(p, multiplyAnyArray[2])[0];
+    let p3 = multiply(p2, multiplyAnyArray[3])[0];
+    let total = multiply(p3, multiplyAnyArray[4])[0];
+    
+    let product = [total, `The numbers ${multiplyAnyArray[0]},${multiplyAnyArray[1]},${multiplyAnyArray[2]},${multiplyAnyArray[3]},${multiplyAnyArray[4]} have a product of ${total}.`];
+
+// return [total, `The numbers 1,2,3,4,5 have a product of 120 ` + multiplyAnyArray[0] + ` and ` + multiplyAnyArray[1] + ` and ` + multiplyAnyArray[2] + ` and ` + multiplyAnyArray[3] + ` and ` + multiplyAnyArray[4] + ` is ` + total + `.` ];
+
+
+
 
 }
 
