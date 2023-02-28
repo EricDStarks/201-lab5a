@@ -121,11 +121,19 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
+    let p = multiply(multArr[0], multArr[1])[0];
+    let total = multiply(p, multArr[2])[0];
+    // return [total, `The numbers 2,3,4 have a product of 24 ` + multArr[0] + ` and ` + multArr[1] + ` and ` + multArr[2] + ` is` + total + `.`];
+    let thisNewArr = [total, `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${total}.`];
+
+    return thisNewArr;
 
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
+
+console.log(multiplyArray(testArray));
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
